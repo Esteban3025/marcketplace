@@ -13,7 +13,7 @@ export default function ProductsPage() {
       id: 1,
       title: "iPhone 14 Pro Max 256GB",
       price: "$850.000",
-      location: "Buenos Aires, CABA",
+      location: "San Antonio, Central",
       image: "/placeholder.svg?height=200&width=200",
       category: "Tecnología",
       featured: true,
@@ -23,7 +23,7 @@ export default function ProductsPage() {
       id: 2,
       title: "Notebook Lenovo ThinkPad X1",
       price: "$420.000",
-      location: "Córdoba Capital",
+      location: "San Lorenzo, Central",
       image: "/placeholder.svg?height=200&width=200",
       category: "Tecnología",
       featured: false,
@@ -33,7 +33,7 @@ export default function ProductsPage() {
       id: 3,
       title: "Bicicleta Mountain Bike Trek",
       price: "$180.000",
-      location: "Rosario, Santa Fe",
+      location: "Limpio, Central",
       image: "/placeholder.svg?height=200&width=200",
       category: "Deportes",
       featured: false,
@@ -43,7 +43,7 @@ export default function ProductsPage() {
       id: 4,
       title: "PlayStation 5 + 2 Joysticks",
       price: "$650.000",
-      location: "Mendoza Capital",
+      location: "Villa Rica, Guairá",
       image: "/placeholder.svg?height=200&width=200",
       category: "Gaming",
       featured: true,
@@ -53,7 +53,7 @@ export default function ProductsPage() {
       id: 5,
       title: "Sofá 3 Cuerpos Cuero",
       price: "$320.000",
-      location: "La Plata, Buenos Aires",
+      location: "Santani, San Pedro",
       image: "/placeholder.svg?height=200&width=200",
       category: "Hogar",
       featured: false,
@@ -63,7 +63,7 @@ export default function ProductsPage() {
       id: 6,
       title: "Auto Volkswagen Gol 2018",
       price: "$2.800.000",
-      location: "Tucumán Capital",
+      location: "Mariano Roque Alonso, Central",
       image: "/placeholder.svg?height=200&width=200",
       category: "Vehículos",
       featured: false,
@@ -113,10 +113,10 @@ export default function ProductsPage() {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">Todas</SelectItem>
-                  <SelectItem value="caba">CABA</SelectItem>
-                  <SelectItem value="cordoba">Córdoba</SelectItem>
-                  <SelectItem value="santa-fe">Santa Fe</SelectItem>
-                  <SelectItem value="mendoza">Mendoza</SelectItem>
+                  <SelectItem value="caba">Asuncion</SelectItem>
+                  <SelectItem value="cordoba">San Antonio</SelectItem>
+                  <SelectItem value="santa-fe">Limpio</SelectItem>
+                  <SelectItem value="mendoza">San Lorenzo</SelectItem>
                 </SelectContent>
               </Select>
 

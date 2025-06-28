@@ -8,17 +8,17 @@ import Image from "next/image"
 
 export default function ProfilePage() {
   const user = {
-    name: "María González",
+    name: "Antonio Roa",
     avatar: "/placeholder.svg?height=120&width=120",
-    location: "Buenos Aires, CABA",
-    memberSince: "Marzo 2022",
+    location: "San Antonio, Central",
+    memberSince: "Junio 2025",
     rating: 4.8,
     reviews: 47,
     followers: 234,
     following: 89,
     verified: true,
     description:
-      "Apasionada por la tecnología y los productos de calidad. Siempre busco dar el mejor servicio a mis compradores. Respondo rápido y soy muy cuidadosa con los envíos.",
+      "Apasionado por la tecnología y los productos de calidad. Siempre busco dar el mejor servicio a mis compradores. Respondo rápido y soy muy cuidadoso con los envíos.",
     stats: {
       totalSales: 156,
       activeListings: 12,
@@ -71,7 +71,7 @@ export default function ProfilePage() {
       reviewer: "Carlos Mendez",
       avatar: "/placeholder.svg?height=40&width=40",
       rating: 5,
-      comment: "Excelente vendedora, muy responsable y el producto llegó en perfectas condiciones. Recomendada 100%.",
+      comment: "Excelente vendedor, muy responsable y el producto llegó en perfectas condiciones. Recomendada 100%.",
       date: "Hace 1 semana",
       product: "iPhone 13 Pro",
     },

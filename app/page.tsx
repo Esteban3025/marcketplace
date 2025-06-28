@@ -73,7 +73,7 @@ export default function HomePage() {
               Compra y vende con <span className="text-blue-400">confianza</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300">
-              El marketplace social donde conectas con tu comunidad
+              PuestoFlex, tu marketplace para comprar, vender y conectar.
             </p>
 
             {/* Search Bar */}
@@ -81,7 +81,7 @@ export default function HomePage() {
               <div className="relative">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                 <Input placeholder="¿Qué estás buscando?" className="pl-12 py-4 text-lg bg-white text-gray-900" />
-                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-black hover:bg-transparent">
+                <button className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400">
                   Buscar
                 </button>
               </div>
@@ -99,58 +99,14 @@ export default function HomePage() {
                 asChild
                 variant="outline"
                 size="lg"
-                className="border-white text-white hover:bg-white hover:text-slate-900"
+                className="border-white text-black bg-white"
               >
-                <Link href="/registro">
+                <Link href="/registro" className="hover:bg-gray-200">
                   <Users className="w-5 h-5 mr-2" />
-                  Únete gratis
+                  <span className="">Únete gratis</span>
                 </Link>
               </Button>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Featured Products */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl font-bold text-gray-900">Productos destacados</h2>
-            <Button asChild variant="outline">
-              <Link href="/productos">
-                Ver todos
-                <ArrowRight className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProducts.map((product) => (
-              <Card key={product.id} className="group hover:shadow-lg transition-shadow cursor-pointer">
-                <CardContent className="p-0">
-                  <div className="relative">
-                    <Image
-                      src={product.image || "/placeholder.svg"}
-                      alt={product.title}
-                      width={300}
-                      height={200}
-                      className="w-full h-48 object-cover rounded-t-lg"
-                    />
-                    <Badge className="absolute top-2 left-2 bg-blue-600">Destacado</Badge>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
-                      {product.title}
-                    </h3>
-                    <p className="text-2xl font-bold text-slate-900 mb-2">{product.price}</p>
-                    <div className="flex items-center text-gray-600">
-                      <MapPin className="w-4 h-4 mr-1" />
-                      <span className="text-sm">{product.location}</span>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
           </div>
         </div>
       </section>
@@ -190,6 +146,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      
+
+      {/* CTA Section */}
+      {/* <section className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">¿Listo para empezar?</h2>
+          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+            Únete a miles de usuarios que ya confían en PuestoFlex para sus compras y ventas
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button asChild size="lg" className="bg-slate-900 hover:bg-slate-800">
+              <Link href="/registro">Crear cuenta gratis</Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link href="/productos">Explorar productos</Link>
+            </Button>
+          </div>
+        </div>
+      </section> */}
+
+      {/* <section className="py-16 bg-blue-50">
+        <div className="container mx-auto px-4 text-center">
+          <Button asChild variant={"outline"}>
+            <Link href="/productos" className="text-gray-700 hover:text-slate-900 font-medium">
+              Ver Productos
+            </Link>
+          </Button>
+        </div>
+      </section> */}
+
       {/* Stats Section */}
       <section className="py-16 bg-slate-900 text-white">
         <div className="container mx-auto px-4">
@@ -210,23 +196,50 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-blue-50">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">¿Listo para empezar?</h2>
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Únete a miles de usuarios que ya confían en PuestoFlex para sus compras y ventas
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-slate-900 hover:bg-slate-800">
-              <Link href="/registro">Crear cuenta gratis</Link>
+      {/* Featured Products */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl font-bold text-gray-900">Productos Destacados</h2>
+            <Button asChild variant="outline">
+              <Link href="/productos">
+                Ver todos
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </Link>
             </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link href="/productos">Explorar productos</Link>
-            </Button>
+          </div>  
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredProducts.map((product) => (
+              <Card key={product.id} className="group hover:shadow-lg transition-shadow cursor-pointer">
+                <CardContent className="p-0">
+                  <div className="relative">
+                    <Image
+                      src={product.image || "/placeholder.svg"}
+                      alt={product.title}
+                      width={300}
+                      height={200}
+                      className="w-full h-48 object-cover rounded-t-lg"
+                    />
+                    <Badge className="absolute top-2 left-2 bg-blue-600">Destacado</Badge>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="font-semibold text-lg mb-2 group-hover:text-blue-600 transition-colors">
+                      {product.title}
+                    </h3>
+                    <p className="text-2xl font-bold text-slate-900 mb-2">{product.price}</p>
+                    <div className="flex items-center text-gray-600">
+                      <MapPin className="w-4 h-4 mr-1" />
+                      <span className="text-sm">{product.location}</span>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
-      </section>
+      </section> 
+      
     </div>
   )
 }
